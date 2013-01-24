@@ -1,0 +1,4 @@
+This is an implementation of a stream interface using memory-mapped io.
+That's it...
+
+By Emanuel Fiuza de Oliveira
