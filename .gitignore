@@ -1,2 +1,5 @@
 # ignore tilde files of emacs
 *~
+
+# ignore Mac OS X ".DS_Store" files
+\.DS_Store

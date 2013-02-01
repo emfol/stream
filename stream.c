@@ -101,6 +101,12 @@ stream *stream_open(const char *path, const char *mode) {
 		goto failure;
 	}
 
+	/* check for regular files only */
+	if ((inf.st_mode & S_IFMT) != S_IFREG) {
+ 		errno = ENOSTR;
+		goto failure;
+	}
+
 	/* check file size */
 	if (inf.st_size > LONG_MAX) {
 		errn = EFBIG;
